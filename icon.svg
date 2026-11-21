@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a8a57"/><stop offset="1" stop-color="#1a5c3a"/>
+    </linearGradient>
+    <linearGradient id="hr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff5a4e"/><stop offset="1" stop-color="#d42a22"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- asa y estructura del carrito -->
+  <path d="M70 118h58l50 232h222" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- cesta -->
+  <path d="M146 168h300l-34 142H176z" fill="#fff" stroke="#fff" stroke-width="22" stroke-linejoin="round"/>
+  <!-- ruedas -->
+  <circle cx="204" cy="404" r="30" fill="#fff"/><circle cx="376" cy="404" r="30" fill="#fff"/>
+  <circle cx="204" cy="404" r="11" fill="#1d6640"/><circle cx="376" cy="404" r="11" fill="#1d6640"/>
+  <!-- corazón -->
+  <path transform="translate(236 176) scale(1.22)" d="M50 86C20 64 4 48 4 30 4 16 15 6 28 6c10 0 18 6 22 14 4-8 12-14 22-14 13 0 24 10 24 24 0 18-16 34-46 56z" fill="url(#hr)"/>
+  <path transform="translate(236 176) scale(1.22)" d="M20 22c3-5 9-7 14-5" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+</svg>

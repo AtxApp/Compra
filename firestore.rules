@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ✏️ Cambia estos dos emails por los vuestros (los mismos que en config.js)
+    function esMiembro() {
+      return request.auth != null
+        && request.auth.token.email.lower() in ['tu@email.com', 'pareja@email.com'];
+    }
+
+    // Lista compartida, habituales compartidos y tiendas: los dos
+    match /shared/{rest=**} {
+      allow read, write: if esMiembro();
+    }
+
+    // Lista personal, habituales personales y recetas: solo su dueño
+    match /users/{uid}/{rest=**} {
+      allow read, write: if esMiembro() && request.auth.uid == uid;
+    }
+  }
+}
